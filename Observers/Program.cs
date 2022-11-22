@@ -11,18 +11,18 @@ namespace Observers
 
             // The observers
             IObserver<AbstractStringSubject> obs1 = new ConsolePrinter();
-            IObserver<AbstractStringSubject> obs2 = new FileSaver("pressed_keys.txt");
+            //IObserver<AbstractStringSubject> obs2 = new FileSaver("pressed_keys.txt");
 
             // Register observers
             kr.RegisterObserver(obs1);
-            kr.RegisterObserver(obs2);
+            //kr.RegisterObserver(obs2);
 
             // Read keys, observers are listening
             Console.WriteLine("Press some keys...");
             kr.ReadKeys();
 
             // Unregister observers
-            kr.RemoveObserver(obs2);
+            //kr.RemoveObserver(obs2);
             kr.RemoveObserver(obs1);
         }
     }
