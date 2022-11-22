@@ -4,7 +4,7 @@ namespace Observers
 {
     public abstract class AbstractStringSubject : ISubject<AbstractStringSubject>
     {
-        private readonly IList<IObserver<AbstractStringSubject>> observers;
+        private readonly ICollection<IObserver<AbstractStringSubject>> observers;
         private string item;
 
         public string Item
