@@ -6,7 +6,7 @@ namespace Delegates
     {
         public static void Main(string[] args)
         {
-            StringOp op = PrintUpper;
+            Action<string> op = PrintUpper;
             op += PrintLower;
             
             Joiner j = new Joiner("abc");
