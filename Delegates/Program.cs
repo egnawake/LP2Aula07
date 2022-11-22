@@ -6,7 +6,13 @@ namespace Delegates
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            StringOp op = PrintUpper;
+            op += PrintLower;
+            
+            Joiner j = new Joiner("abc");
+            op += j.JoinAndPrint;
+
+            op.Invoke("Test");
         }
 
         public static void PrintUpper(string s)
